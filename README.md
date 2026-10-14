@@ -28,9 +28,8 @@ sudo pacman -S --needed python-gobject gtk4 && bash <(curl -fsSL https://github.
 Then open **Idus Elgato Light** from the menu — it offers to find your lights.
 Not on Arch? See [Install](#install).
 
-<!-- Add a screenshot here once you have one:
+
 ![Screenshot](docs/screenshot.png)
--->
 
 ## Elgato on Linux?
 
