@@ -19,8 +19,18 @@ Deck in [OpenDeck](https://github.com/nekename/OpenDeck) takes a minute.
 
 </div>
 
-![Screenshot](docs/screenshot.png)
+## Quick install
 
+```bash
+sudo pacman -S --needed python-gobject gtk4 && bash <(curl -fsSL https://github.com/Idus/idus-elgato-light/releases/latest/download/install-idus-elgato-light.sh)
+```
+
+Then open **Idus Elgato Light** from the menu — it offers to find your lights.
+Not on Arch? See [Install](#install).
+
+<!-- Add a screenshot here once you have one:
+![Screenshot](docs/screenshot.png)
+-->
 
 ## Elgato on Linux?
 
@@ -46,12 +56,21 @@ Linux is all you need.
 
 ## Install
 
-Download the three files (or grab them from [Releases](../../releases)), put them in one
-folder, then run:
+The [one-liner above](#quick-install) installs the dependencies and the latest release on
+Arch / CachyOS. It runs `install-idus-elgato-light.sh` from the latest release, which then
+fetches the app itself.
 
-```bash
-bash install-idus-elgato-light.sh
-```
+Other distros: install the GTK4 bindings with your package manager, then run only the
+`bash <(curl …)` part:
+
+| Distro | Dependencies |
+|---|---|
+| Arch, CachyOS, EndeavourOS, Manjaro | `sudo pacman -S --needed python-gobject gtk4` |
+| Debian 12+, Ubuntu 22.04+, Mint | `sudo apt install python3-gi gir1.2-gtk-4.0` |
+| Fedora | `sudo dnf install python3-gobject gtk4` |
+
+Prefer to read before you run? Download the three files from [Releases](../../releases),
+put them in one folder and run `bash install-idus-elgato-light.sh`.
 
 - Launch from the menu ("Idus Elgato Light") or the terminal (`idus-elgato-light`).
 - **First start** asks if it may search your network. Every light it finds is added, side by

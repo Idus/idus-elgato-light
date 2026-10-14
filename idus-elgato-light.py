@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ─────────────────────────────────────────────────────────────────────────────
-#  Idus Elgato Light  ·  v1.0  ·  build 2026-10-14
+#  Idus Elgato Light  ·  v1.1  ·  build 2026-10-14
 #  (bump APP_VERSION + BUILD below and this line together on every update)
 # ─────────────────────────────────────────────────────────────────────────────
 """
@@ -50,7 +50,7 @@ from pathlib import Path
 APP_NAME = "Idus Elgato Light"
 APP_SLUG = "idus-elgato-light"
 APP_ID = "se.wolfpack.iduselgatolight"
-APP_VERSION = "1.0"
+APP_VERSION = "1.1"
 BUILD = "2026-10-14"  # keep in sync with the header comment at the top of this file
 REPO_URL = "https://github.com/Idus/idus-elgato-light"
 KOFI_URL = "https://ko-fi.com/N4N2QZHKK"

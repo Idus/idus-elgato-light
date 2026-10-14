@@ -4,6 +4,12 @@ All notable changes to Idus Elgato Light are documented here. The format is base
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1] – 2026-10-14
+
+### Added
+- One-line install: `bash <(curl -fsSL …/releases/latest/download/install-idus-elgato-light.sh)`.
+  Run without the app next to it, the installer fetches the app and icon from the latest release.
+
 ## [1.0] – 2026-10-14
 
 First public release — the successor of the private WolfLight, rebuilt from scratch in English.

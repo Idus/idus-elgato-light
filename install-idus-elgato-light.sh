@@ -1,12 +1,28 @@
 #!/usr/bin/env bash
-# Idus Elgato Light installer  ·  v1.0  ·  build 2026-10-14
+# Idus Elgato Light installer  ·  v1.1  ·  build 2026-10-14
 # Installs Idus Elgato Light (GTK4) as a self-contained folder in ~/.local/share/idus-elgato-light
 # + a start-menu entry with icon and right-click actions.
 # Your lights and presets live in that folder and are never touched by a re-install.
-# Run:  bash install-idus-elgato-light.sh
+# Run:  bash install-idus-elgato-light.sh          (next to the downloaded files)
+#  or:  bash <(curl -fsSL https://github.com/Idus/idus-elgato-light/releases/latest/download/install-idus-elgato-light.sh)
 set -e
-SRC="$(cd "$(dirname "$0")" && pwd)"
+SRC="$(cd "$(dirname "$0")" 2>/dev/null && pwd || pwd)"
 APP="$HOME/.local/share/idus-elgato-light"
+
+# One-line install: without the app next to this script, fetch it from the latest GitHub release
+if [ ! -f "$SRC/idus-elgato-light.py" ]; then
+    BASE="${IEL_DOWNLOAD_BASE:-https://github.com/Idus/idus-elgato-light/releases/latest/download}"
+    command -v curl >/dev/null 2>&1 || { echo "❌ curl is needed — install it with your package manager"; exit 1; }
+    TMP="$(mktemp -d)"
+    trap 'rm -rf "$TMP"' EXIT
+    echo "⬇️  downloading Idus Elgato Light (latest release) …"
+    curl -fsSL "$BASE/idus-elgato-light.py" -o "$TMP/idus-elgato-light.py" || \
+        { echo "❌ download failed — check your connection, or download the files from GitHub"; exit 1; }
+    curl -fsL "$BASE/idus-elgato-light.png" -o "$TMP/idus-elgato-light.png" || true
+    head -n 5 "$TMP/idus-elgato-light.py" | grep -q "Idus Elgato Light" || \
+        { echo "❌ that download isn't Idus Elgato Light — stopping"; exit 1; }
+    SRC="$TMP"
+fi
 BIN="$HOME/.local/bin"
 ICONS="$HOME/.local/share/icons/hicolor/512x512/apps"
 
