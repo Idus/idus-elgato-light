@@ -19,9 +19,9 @@ Deck in [OpenDeck](https://github.com/nekename/OpenDeck) takes a minute.
 
 </div>
 
-<!-- Add a screenshot here once you have one:
+Add a screenshot here once you have one:
 ![Screenshot](docs/screenshot.png)
--->
+
 
 ## Elgato on Linux?
 
