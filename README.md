@@ -4,10 +4,10 @@
 
 # Idus Elgato Light
 
-**Your Elgato lights on Linux — presets, and a ready OpenDeck key for every action.**
+**Elgato Key Light, Ring Light and Light Strip on Linux — presets, and a ready OpenDeck key for every action.**
 
-A small GTK4 app that controls Elgato Wi-Fi lights straight over their built-in HTTP API —
-no Elgato Control Center (Windows/macOS only) needed. It finds the lights on your network,
+A small GTK4 app that controls Elgato Wi-Fi lights straight over their built-in HTTP API — an
+Elgato Control Center alternative for Linux, no Windows or macOS needed. It finds the lights on your network,
 puts them side by side, saves presets for any combination of them, and gives you a
 copy-ready command plus a matching key image for every shortcut, so setting up a Stream
 Deck in [OpenDeck](https://github.com/nekename/OpenDeck) takes a minute.
@@ -22,6 +22,14 @@ Deck in [OpenDeck](https://github.com/nekename/OpenDeck) takes a minute.
 <!-- Add a screenshot here once you have one:
 ![Screenshot](docs/screenshot.png)
 -->
+
+## Elgato on Linux?
+
+Elgato only makes Control Center for Windows and macOS — but the lights don't need it. Key Light,
+Key Light Air, Key Light Mini, Ring Light and Light Strip all speak a small HTTP API on your
+own network (port 9123), and that's what this app talks to: no cloud, no account, no Wine.
+Set the lights up once in the Elgato phone app (to get them on your Wi-Fi), and from then on
+Linux is all you need.
 
 ## Supported lights
 
